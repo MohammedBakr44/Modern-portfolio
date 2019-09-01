@@ -1,0 +1,12 @@
+mixin icon(icon)
+    a(href="#")
+        i(class=`fab fa-${icon} fa-2x`)
+main#home
+    h1.lg-heading John 
+        span.text-secondary Doe
+    h2.sm-heading Web Developer, Programmer, Designer & Entreprenuer
+    .icons
+        +icon("twitter")
+        +icon("facebook-square")
+        +icon("linkedin")
+        +icon("github")

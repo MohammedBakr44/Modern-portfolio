@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    @include background;
+    height: 100%;
+    background-color: $primary-color;
+}

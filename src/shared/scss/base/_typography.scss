@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+body {
+    font-family: $font;
+    line-height: 1.5;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+        display: inline-block;
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}

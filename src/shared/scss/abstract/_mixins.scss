@@ -1,0 +1,26 @@
+@mixin easeOut($time) {
+    transition: all $time ease-in-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-image {
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($primary-color, $background-opacity);
+                display: block;
+                z-index: -1;
+            }
+        }
+    }
+}
