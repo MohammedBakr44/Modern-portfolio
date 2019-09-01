@@ -11,14 +11,37 @@
 @import "../components/main";
 @import "../components/menu";
 
+$fa-font-path: "../font-awesome/webfonts";
+
 @import "../font-awesome/scss/fontawesome.scss";
 @import "../font-awesome/scss/brands.scss";
 @import "../font-awesome/scss/solid.scss";
 
 
 .nav-item {
-    @include current(1);
+    @include current(3);
 }
 
+// Worl/projects
+
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+        width: 100%;
+        border: 3px #fff solid;
+        @include easeOut(.2s);
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+        }
+    }
+}
+
+
+@import "../components/footer";
 
 @import "../layout/mobile";

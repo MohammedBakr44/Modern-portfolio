@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    include ../shared/pug/mixins
+    head
+        +head("View my work", "../shared/scss/pages/_work")
+        //- link(rel="stylesheet", href=".scss")
+    body
+        +header('../', '')
+        main#awork
+            h1.lg-heading My 
+                span.text-secondary Work
+            h2.sm-heading Check out of my projects
+            .projects
+               +project       
+               +project       
+               +project       
+               +project       
+               +project       
+        - const year = new Date().getFullYear();    
+        footer#main-footer Copyrigths &copy; #{year}   
+        script(src="../main.ts")
+        script(src="../shared/ts/modules/pics.ts")

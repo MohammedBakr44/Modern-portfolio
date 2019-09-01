@@ -4551,15 +4551,34 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
-.nav-item.curren:not(:nth-child(1)) > a {
+.nav-item.curren:not(:nth-child(3)) > a {
   color: #FFF; }
-  .nav-item.curren:not(:nth-child(1)) > a:hover {
+  .nav-item.curren:not(:nth-child(3)) > a:hover {
     padding: 0; }
 
-.nav-item.current:nth-child(1) > a {
+.nav-item.current:nth-child(3) > a {
   color: #eeca1a; }
-  .nav-item.current:nth-child(1) > a:hover {
+  .nav-item.current:nth-child(3) > a:hover {
     padding: 1rem; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid;
+    transition: all 0.2s ease-in-out; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eeca1a; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -4609,4 +4628,4 @@ readers do not read off random characters that represent icons */
     grid-template-columns: 1fr; } }
 
 
-/*# sourceMappingURL=/style.97fcb138.css.map */
+/*# sourceMappingURL=/_work.960ece1f.css.map */

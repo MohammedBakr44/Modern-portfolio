@@ -25,6 +25,21 @@
     }
 }
 
+@mixin current($index) {
+    &.curren:not(:nth-child(#{$index})) > a {
+        color: #FFF;
+        &:hover {
+            padding: 0;  
+        }
+    }
+    &.current:nth-child(#{$index}) > a {
+        color: $secondary-color;
+        &:hover {
+            padding: 1rem;  
+        }
+    }
+}
+
 // Media Query Mixins
 
 @mixin mediaSm {

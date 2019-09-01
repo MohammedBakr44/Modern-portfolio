@@ -1,0 +1,46 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+@import '../abstract/functions';
+
+@import "../base/animations";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+
+@import "../components/header";
+@import "../components/main";
+@import "../components/menu";
+@import "../components/footer";
+
+
+
+.nav-item {
+    @include current(4);
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut(.2s);
+
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+}
+
+@import "../layout/mobile";

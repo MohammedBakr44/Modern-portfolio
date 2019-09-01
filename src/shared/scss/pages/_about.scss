@@ -1,0 +1,68 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+@import '../abstract/functions';
+
+@import "../base/animations";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+
+@import "../components/header";
+@import "../components/main";
+@import "../components/menu";
+
+
+.nav-item {
+    @include current(2);
+}
+
+.about-info {
+    display: grid;
+    grid-template-areas: 
+    'bio-image bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    .bio-image {
+        grid-area: bio-image;
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+
+        h3, h6 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+
+    .job-3 {
+        grid-area: job3;
+    }
+}
+
+@import "../components/footer";
+
+@import "../layout/mobile";

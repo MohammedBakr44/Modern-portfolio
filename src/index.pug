@@ -1,6 +1,9 @@
 doctype html
 html(lang="en")
-    include shared/pug/components/head
+    include shared/pug/mixins
+    head
+        +head("Home", 'style')
     body#bg-image
-        include pages/home
+        +header('', 'pages/')
+        include shared/pug/components/main
         script(src="main.ts")

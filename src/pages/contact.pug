@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    include ../shared/pug/mixins
+    head
+        +head("Contact Me", "../shared/scss/pages/_contact")
+        //- link(rel="stylesheet", href=".scss")
+    body
+        +header('../', '')
+        main#contact
+            h1.lg-heading Contact 
+                span.text-secondary Me
+            h2.sm-heading This is how you can reach me
+            .boxes
+                div
+                    span.text-secondary Email: 
+                    | Johndoe@test.com
+                div
+                    span.text-secondary Phone: 
+                    | (555) 555-5555
+                div
+                    span.text-secondary Adress: 
+                    | 50 Main st Boston MA.            
+        
+        - const year = new Date().getFullYear();    
+        footer#main-footer Copyrigths &copy; #{year}   
+        script(src="../main.ts")

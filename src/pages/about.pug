@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    include ../shared/pug/mixins
+    head
+        +head("About", "../shared/scss/pages/_about")
+        //- link(rel="stylesheet", href=".scss")
+    body
+        +header('../', '')
+        main#about
+            h1.lg-heading About 
+                span.text-secondary Me
+            h2.sm-heading Let me tell you a few things
+            .about-info
+                img(class="bio-image", src="https://media.nature.com/w800/magazine-assets/d41586-018-06034-8/d41586-018-06034-8_16060838.jpg", alt="Shrodinger")
+
+                .bio
+                    h3.text-secondary BIO
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ea illo error vitae sint, molestias adipisci repellendus laborum placeat ad et quo non quaerat aliquam. Reiciendis dicta aliquam cumque commodi.
+                
+                div(class="job job-1")
+                    h3 123 weshop
+                    h6 Full Stack Developer
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quas sed sequi et molestiae consequatur. Laudantium dignissimos commodi nesciunt libero deserunt perferendis fugiat consectetur facere maiores?
+
+                div(class="job job-2")
+                    h3 Design ABC
+                    h6 front-end Developer
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quas sed sequi et molestiae consequatur. Laudantium dignissimos commodi nesciunt libero deserunt perferendis fugiat consectetur facere maiores?
+                
+                div(class="job job-3")
+                    h3 Graphic Alpha
+                    h6 Graphic Designer
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quas sed sequi et molestiae consequatur. Laudantium dignissimos commodi nesciunt libero deserunt perferendis fugiat consectetur facere maiores?
+        
+        - const year = new Date().getFullYear();    
+        footer#main-footer Copyrigths &copy; #{year}   
+        script(src="../main.ts")

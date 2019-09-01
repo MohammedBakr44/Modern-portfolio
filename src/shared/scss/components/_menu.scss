@@ -10,7 +10,7 @@
         width: 28px;
         height: 3px;
         margin-bottom: 5px;
-        background: #fff;
+        background: set-text-color($primary-color);
         transition: all 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
     }
 
@@ -96,24 +96,17 @@
         @include easeOut(.5s);
         &.show {
             transform: translate(0, 0);
-        } 
+        }
 
         .nav-link {
             display: inline-block;
             position: relative;
             font-size: 2rem;
             font-weight: 300;
-            color: #fff;
+            color: set-text-color($primary-color);
             text-transform: uppercase;
             padding: 1rem 0;
             @include easeOut(.5s);
-
-            &.current {
-                color: $secondary-color;
-                &:hover {
-                    padding: 1rem;  
-                }
-            }
 
             &:hover {
                 color: $secondary-color;
