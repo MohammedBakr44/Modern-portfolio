@@ -1,0 +1,58 @@
+// Wide screens
+
+@include mediaXL {
+
+}
+
+// Desktops & laptops
+@include mediaLg {
+    
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .sm-heading {
+            font-size: 4vw;
+            white-space: normal;
+        }
+    }
+
+    ul.menu-nav, div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        &.show {
+            transform: translate(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate(-100%, 0);
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate(100%, 0);
+
+        .portrait {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+// Smartohones
+@include mediaSm {
+    main#home h1 {
+        margin-top: 10vh;
+    }
+}
