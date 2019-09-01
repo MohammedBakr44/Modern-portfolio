@@ -11,26 +11,123 @@
         height: 3px;
         margin-bottom: 5px;
         background: #fff;
-        @include easeOut(.5s);
+        transition: all 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
     }
 
     // Rotate effect
 
     &.close {
-        transform: rotate(180deg);
         .btn-line {
+            box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.5);
             // Line 1 - Rotate
             &:first-child {
                 transform: rotate(45deg) translate(5px, 5px);
             }
             // Line 2 - Rotate
             &:nth-child(2) {
-                opacity: 0;
+                transform: translateX(200px);
             }
             // Line 3 - Rotate
             &:last-child {
                 transform: rotate(-45deg) translate(7px, -6px);
             }
         }
+    }
+}
+
+// Menu Overlay
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding, &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        background: darken($primary-color, $amount: 5);
+        list-style: none;
+        transform: translate(0, -100%);
+        @include easeOut(.5s);
+        &.show {
+            // Slide in from top
+            transform: translate(0, 0);
+        }
+    }
+
+    // Branding Side
+    &-branding {
+        background: $primary-color;
+        @include easeOut(.5s);
+        transform: translate(0, 100%);
+        &.show {
+            // Slide in from bottom
+            transform: translate(0, 0);
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url($portrait);
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            border: 3px solid $secondary-color;
+        }
+    }
+
+    .nav-item {
+        transform: translate(600px, 0);
+        @include easeOut(.5s);
+        &.show {
+            transform: translate(0, 0);
+        } 
+
+        .nav-link {
+            display: inline-block;
+            position: relative;
+            font-size: 2rem;
+            font-weight: 300;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 1rem 0;
+            @include easeOut(.5s);
+
+            &.current {
+                color: $secondary-color;
+                &:hover {
+                    padding: 1rem;  
+                }
+            }
+
+            &:hover {
+                color: $secondary-color;
+                padding-right: 2.5rem;
+            }
+        }
+    }
+
+}
+
+// Delay each nav item slide
+
+@for $i from 1 through 4 {
+    .nav-item:nth-child(#{$i}) {
+        transition-delay: $i * 0.1s;
     }
 }

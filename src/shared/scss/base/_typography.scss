@@ -17,6 +17,8 @@ h1, h2, h3 {
         padding: 0.2rem 1rem;
         background: rgba(lighten($primary-color, 2), 0.5);
         display: inline-block;
+        font-size: 2vw;
+        white-space: nowrap;
     }
 }
 
