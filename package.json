@@ -19,7 +19,7 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "unsplash-js": "^5.0.0"
   }
 }
